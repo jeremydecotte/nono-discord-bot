@@ -1,0 +1,19 @@
+{
+  "name": "clovis_bot",
+  "version": "1.0.1",
+  "description": "Robot pour le serveur discord Clovis",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "console-stamp": "^0.2.9",
+    "discord.js": "^12.4.1",
+    "moment": "^2.29.1",
+    "rss-parser": "^3.9.0"
+  }
+}

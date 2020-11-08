@@ -1,0 +1,60 @@
+{
+    "BOT_TOKEN": "ROBOT_TOKEN",
+    "HELP_CHANNEL_NAME": "poubelle",
+    "DEFAULT_REMINDERS_INTERVAL": 60000,
+    "LOG_CHANNEL" : "771507097522143272",
+    "MESSAGE_TOO_LONG_DETECTOR" : {
+      "length" : 120,
+      "channel" : "689106937551257679"
+    },
+    "PREUMS_DETECTOR": {
+        "words": [
+            "preums",
+            "preums !"
+        ],
+        "channel": "689106937551257679",
+        "delay": 120000
+    },
+    "REMINDERS": [
+        {
+            "name": "Mêlée",
+            "channel": "689106937551257679",
+            "text": "C'est l'heure de la mêlée, go MégaConf Circuit ==> https://eu.yourcircuit.com/#/conversation/fc879fbc-4474-4a83-b294-256706ee9824 !",
+            "trigger": {
+                "at": [
+                    {
+                        "time": "08:59",
+                        "lastTriggeredDay": null
+                    }
+                ],
+                "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            }
+        },
+        {
+            "name": "Saisie des temps",
+            "channel": "689106937551257679",
+            "text": "C'est bientôt fini le petit dej, pensez à saisir vos temps !",
+            "trigger": {
+                "at": [
+                    {
+                        "time": "08:50",
+                        "lastTriggeredDay": null
+                    }
+                ],
+                "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            }
+        }
+    ]
+}
