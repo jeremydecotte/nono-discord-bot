@@ -44,7 +44,8 @@ client.on("message", function (message) {
       .then(response => {
         message.reply(`tu reprendras bien un peu de chuck norris : ${response.data.value}`);
       });
-  } else if (command === "waza") {
+  } 
+  else if (command === "waza") {
     message.reply(`WHAAAAAAASSUUUUUUUUUUUUUUUUP`);
   }
   else if (command === "kaamelott" && db['kaamelott']) {
