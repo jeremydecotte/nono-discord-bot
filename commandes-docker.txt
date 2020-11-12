@@ -6,4 +6,4 @@ Vérifier les logs d'un container HS :
 Lancer le container 
  - se mettre dans le répertoire /var/web/nodejs/clovis-bot
  - docker build -t clovis-bot .
- - docker rum -d clovis-bot
+ - docker run -d clovis-bot
