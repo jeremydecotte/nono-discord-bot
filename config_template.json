@@ -18,13 +18,11 @@
     "BONJOUR_DETECTOR": {
         "words": [
             "bonjour",
-            "Bonjour",
 			"hello",
-			"Hello",
-			"Salut",
 			"salut"
         ],
-        "channel": "689106937551257679"
+        "channel": "689106937551257679",
+        "before_time": "08:30"
     },
     "REMINDERS": [
         {

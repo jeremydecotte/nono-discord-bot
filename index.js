@@ -44,14 +44,14 @@ client.on("message", function (message) {
       .then(response => {
         message.reply(`tu reprendras bien un peu de chuck norris : ${response.data.value}`);
       });
-  } 
+  }
   else if (command === "kaamelott" && db['kaamelott']) {
     clearTimeout(kaamelottTimer);
     kaamelottTimer = setTimeout(() => {
       let index = (args.length > 0 && args <= db['kaamelott'].length) ? args : Math.floor(Math.random() * db['kaamelott'].length);
       let citation = db['kaamelott'][index - 1];
       citation.split('|').forEach((c) => {
-        message.reply(`(${index}/${db['kaamelott'].length}) - ${c.replace(/¤/g,'\n')}`);
+        message.reply(`(${index}/${db['kaamelott'].length}) - ${c.replace(/¤/g, '\n')}`);
       });
     }, 2000);
   }
@@ -69,16 +69,17 @@ client.on("message", function (message) {
 // Partie "Bonjour" détector
 client.on("message", function (message) {
   if (message.author.bot) return;
-  // Sur le même chan que preums
   //if (message.channel.id != config.BONJOUR_DETECTOR.channel) return; // commenté pour test sur poubelle
 
-  // Si l'on détecte un message "preums", on lance l'analyse !
-  if (config.BONJOUR_DETECTOR.words.some((w) => message.content.toLocaleLowerCase().startsWith(w.toLocaleLowerCase()))) {
-	if (Math.floor(Math.random() * 5)==0) { // 1 chance sur 5
-		message.reply(`WHAAAAAAASSUUUUUUUUUUUUUUUUP`);
-	}
+  // Si l'on détecte un message "bonjour", on lance l'analyse !
+  if (config.BONJOUR_DETECTOR.words.some((w) => message.content.toLocaleLowerCase().startsWith(w.toLocaleLowerCase()))
+    && db['toolongmessages']
+    && Math.floor(Math.random() * config.BONJOUR_DETECTOR.randomizer) == 0) {
+    let index = Math.floor(Math.random() * db['hello'].length);
+    setTimeout(() => message.reply(`${db['hello'][index]}`), 2000);
+
   }
-}
+});
 
 // Partie "preums détector"
 client.on("message", function (message) {
