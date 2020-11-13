@@ -15,6 +15,17 @@
         "channel": "689106937551257679",
         "delay": 120000
     },
+    "BONJOUR_DETECTOR": {
+        "words": [
+            "bonjour",
+            "Bonjour",
+			"hello",
+			"Hello",
+			"Salut",
+			"salut"
+        ],
+        "channel": "689106937551257679"
+    },
     "REMINDERS": [
         {
             "name": "Mêlée",
