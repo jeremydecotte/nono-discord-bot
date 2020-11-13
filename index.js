@@ -45,9 +45,6 @@ client.on("message", function (message) {
         message.reply(`tu reprendras bien un peu de chuck norris : ${response.data.value}`);
       });
   } 
-  else if (command === "waza") {
-    message.reply(`WHAAAAAAASSUUUUUUUUUUUUUUUUP`);
-  }
   else if (command === "kaamelott" && db['kaamelott']) {
     clearTimeout(kaamelottTimer);
     kaamelottTimer = setTimeout(() => {
@@ -69,6 +66,19 @@ client.on("message", function (message) {
   }
 });
 
+// Partie "Bonjour" détector
+client.on("message", function (message) {
+  if (message.author.bot) return;
+  // Sur le même chan que preums
+  //if (message.channel.id != config.BONJOUR_DETECTOR.channel) return; // commenté pour test sur poubelle
+
+  // Si l'on détecte un message "preums", on lance l'analyse !
+  if (config.BONJOUR_DETECTOR.words.some((w) => message.content.toLocaleLowerCase().startsWith(w.toLocaleLowerCase()))) {
+	if (Math.floor(Math.random() * 5)==0) { // 1 chance sur 5
+		message.reply(`WHAAAAAAASSUUUUUUUUUUUUUUUUP`);
+	}
+  }
+}
 
 // Partie "preums détector"
 client.on("message", function (message) {
