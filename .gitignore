@@ -106,3 +106,4 @@ dist
 # Config file
 config.json
 package-lock.json
+.vscode/launch.json

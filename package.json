@@ -11,9 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.0",
+    "cheerio": "^1.0.0-rc.3",
     "console-stamp": "^0.2.9",
     "discord.js": "^12.4.1",
     "moment": "^2.29.1",
+    "node-html-parser": "^2.0.0",
     "rss-parser": "^3.9.0"
   }
 }
